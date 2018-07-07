@@ -1,0 +1,22 @@
+{{> header}}
+
+
+<body>
+  <form
+    id='uploadForm'
+    action='http://localhost:3030/newUser'
+    method='post'
+    encType="multipart/form-data">
+      <label for="name">email</label>
+      <input type="text" name="email" value="">
+      <label for="name">пароль</label>
+      <input type="text" name="password" value="">
+      <label for="name">Имя</label>
+      <input type="text" name="first_name" value="">
+      <label for="name">Фамилия</label>
+      <input type="text" name="last_name" value="">
+      <label for="ava">Аватар</label>
+      <input type="file" name="ava" />
+      <input type='submit' value='Создать' />
+  </form>
+</body>

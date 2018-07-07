@@ -1,0 +1,39 @@
+{{> header}}
+{{> menu}}
+
+<body>
+  <main>
+    <div id="app">
+      <h1>{{title}}</h1>
+    </div>
+    <div class="container">
+      <section class="add-section">
+        <div class="add-button-wrapper">
+          <button type="button" name="button" class="add-btn btn">Добавить фото!</button>
+          <div class="modal-wrapper">
+            <form class="add-image-form" action="/addImage" method="post" encType="multipart/form-data">
+              <label for="image"></label>
+              <input type="file" name="image" value="">
+              <input type="submit" name="button">Добавить</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="posts-wrapper">
+          <div class="row">
+            {{#each user.photos}}
+              <div class="post-wrapper col-3">
+                <img src="/uploads/{{this.link}}" alt="" class="img-fluid">
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+
+
+{{> footer}}
